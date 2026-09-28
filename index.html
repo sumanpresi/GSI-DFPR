@@ -174,6 +174,21 @@ ol.cond li b{color:var(--ink);font-weight:600}
 .doc dt{color:var(--ink-3)}
 .doc dd{margin:0;color:var(--ink)}
 .doc p{margin:0;font-size:12.5px;color:var(--ink-2)}
+/* SG section */
+.sg-intro{padding:14px 16px;border-bottom:1px solid var(--line);display:grid;gap:10px}
+.sg-intro p{margin:0;max-width:80ch;color:var(--ink-2)}
+.sg-intro b{color:var(--ink)}
+.sg-list{display:grid;grid-template-columns:repeat(2,1fr)}
+@media (max-width:760px){.sg-list{grid-template-columns:1fr}}
+.sg-item{display:grid;grid-template-columns:62px 1fr;gap:4px 10px;padding:12px 16px;border-bottom:1px solid var(--line);border-left:3px solid var(--lim)}
+.sg-item.named{border-left-color:var(--accent)}
+.sg-item .no{font-family:var(--mono);font-size:12px;color:var(--ink-3);grid-row:span 3}
+.sg-item .nm{font-weight:600}
+.sg-item .v{color:var(--ink)}
+.sg-item .note{font-size:11.5px;color:var(--ink-3)}
+.sg-hoo{padding:14px 16px}
+.sg-hoo h3{font-size:13px;font-weight:700;margin-bottom:6px}
+.sg-hoo ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:12.5px;display:grid;gap:3px}
 footer{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-3);max-width:90ch}
 @media (prefers-reduced-motion:no-preference){.bar span{transition:flex-basis .4s ease}}
 </style>
@@ -191,11 +206,30 @@ footer{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);font-si
 </header>
 
 <nav class="tabs" aria-label="Sections">
+  <a href="#sg">Superintending Geologist</a>
   <a href="#overview">Overview</a>
   <a href="#powers">Powers by item</a>
   <a href="#conditions">Conditions</a>
   <a href="#documents">Documents</a>
 </nav>
+
+<section id="sg">
+  <div class="sec-head">
+    <h2>Your powers as Superintending Geologist</h2>
+    <button class="chip" type="button" id="sgShow">Show this column in the full table</button>
+  </div>
+  <div class="panel">
+    <div class="sg-intro">
+      <p>Annexure-II gives powers to a Superintending Geologist in the last column, as <b>“Director / Superintending Geologist I/C (Field Program)”</b>. Those powers apply while you are <b>In-Charge of a Field Season Programme (FSP)</b>. If you also hold HOO charge, the HOO-only powers listed below apply as well. For everything else this order gives no power at your level, so proposals go to your DDG / Director I/C or HoD.</p>
+      <div class="legend"><span><i class="sw" style="background:var(--accent)"></i>Named for the FSP in-charge</span><span><i class="sw" style="background:var(--lim)"></i>Given to the whole column</span></div>
+    </div>
+    <div class="sg-list" id="sgList"></div>
+    <div class="sg-hoo">
+      <h3>HOO-only: not yours unless you also hold HOO charge</h3>
+      <ul id="sgHoo"></ul>
+    </div>
+  </div>
+</section>
 
 <section id="overview">
   <div class="sec-head">
@@ -300,8 +334,8 @@ const L=[
  {k:'DG',s:'DG, GSI',d:'Director General, GSI'},
  {k:'HoD',s:'HoDs',d:'All HoDs of Regions, incl. HoD of CHQ, RSAS & M&CSD'},
  {k:'DDG',s:'DDG / Dir. I/C units',d:'DDGs / Directors I/C of State Units, DGCO, Head of TI, Operations, DDG (OPEC & OPWC)'},
- {k:'Spec',s:'Chem · Geophys · Engg',d:'DDG/Director I/C Chemistry & Geophysics; CE/SE I/C Engineering'},
- {k:'HOO',s:'HOOs & FSP I/C',d:'HOOs of Regions/State Units, CHQ, RSAS, M&CSD, TI, DGCO; Director/SG I/C Field Program'}
+ {k:'Spec',s:'Chem · Geophys · Engg',d:'DDG/Director I/C Chemistry & Geophysics; Chief Engineer / Superintending Engineer I/C Engineering'},
+ {k:'HOO/SG',s:'HOOs & Director/SG I/C FSP',d:'HOOs of Regions/State Units, CHQ, RSAS, M&CSD, TI, DGCO; Director / Superintending Geologist (or Geophysicist) In-Charge of a Field Season Programme'}
 ];
 const CH={I:'Procurement',II:'Land & Building',III:'Civil Works',IV:'Repair & Maintenance',V:'Hiring of Services, Equipment & Transport',VI:'Transportation, Material',VII:'Insurance, Rates & Taxes',VIII:'Communication Facilities',IX:'Office Contingencies',X:'Exhibition & Seminar',XI:'Printing & Binding',XII:'Contingent & Departmental Advances',XIII:'Unserviceable Stores, Machinery, Equipment',XIV:'Miscellaneous',XV:'Welfare & Grant-in-Aid',XVI:'Administration & Legal Affairs'};
 const N='Nil';
@@ -471,6 +505,28 @@ function render(){
  document.getElementById('reset').hidden=!parts.length&&!state.hideNil;
 }
 render();
+
+// Superintending Geologist view
+const SG=[
+ ['I · 5','Medicines for office / field work & high-altitude work','₹5,000/yr per individual',0],
+ ['I · 7','POL for vehicles, drilling rigs, generators','₹50,000 per case, annual limit ₹2.5 lakh',0],
+ ['I · 4','Publications & journals','Official periodicals ₹10,000/yr; SOI maps, NRSA data, books, newspapers ₹3,000/yr; online subscriptions Nil',0],
+ ['IV · 1','Repairs & removal of machinery / instruments (non-capital)','₹25,000 per machine or instrument, annual ceiling ₹1 lakh',0],
+ ['V · 2','Hiring office furniture, fans, coolers, ACs, heaters, purifiers','₹10,000/yr',0],
+ ['V · 3','Hiring vehicles for shifting / closing a camp','₹10,000 per FSP',1],
+ ['VIII · 1','Postal / courier for sending samples','₹25,000 per case',1],
+ ['IX · 3','Misc. day-to-day expenses of the FSP','₹25,000/yr per FSP',1],
+ ['XV · 1','Recreational facilities for field camps','₹5,000/yr per camp',0],
+ ['VII · 1','Municipal rates & taxes','₹10 lakh/yr',0,'Listed for the whole column without naming who uses it; confirm with your HOO before using it.']
+];
+document.getElementById('sgList').innerHTML=SG.map(([n,t,v,named,note])=>`<div class="sg-item${named?' named':''}"><span class="no">${n}</span><span class="nm">${esc(t)}</span><span class="v">${fmt(v)}</span>${note?`<span class="note">${esc(note)}</span>`:''}</div>`).join('');
+document.getElementById('sgHoo').innerHTML=[
+ 'I · 3 Purchase & repair of stores/instruments (₹10,000 per case, max ₹1 lakh/yr) and furniture (₹15,000/yr)',
+ 'VIII · 1 General postal/courier: ₹25,000 per case, max ₹1 lakh/yr',
+ 'VIII · 2 Telephone charges: full power where administratively approved',
+ 'IX · 1 Gas, water, electricity & solar charges: ₹25 lakh/yr'
+].map(s=>`<li>${fmt(s)}</li>`).join('');
+document.getElementById('sgShow').onclick=()=>{state.lvl='4';lvlSel.value='4';state.hideNil=true;document.getElementById('hideNil').checked=true;render();document.getElementById('powers').scrollIntoView()};
 
 // Conditions
 const cII=[
