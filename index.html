@@ -1,0 +1,503 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>GSI Financial Powers 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f3f5f4; --surface:#ffffff; --surface-2:#e9eeec; --ink:#16211f; --ink-2:#4a5855; --ink-3:#7b8884;
+  --line:#d5ddda; --accent:#1f5f8b; --accent-soft:#dce8f1;
+  --full:#1f7a55; --full-bg:#dcefe5; --lim:#9a6412; --lim-bg:#f7e9cf; --nil:#9aa5a2; --nil-bg:#eef1f0;
+  --shadow:0 1px 2px rgba(20,40,35,.06),0 4px 16px rgba(20,40,35,.05);
+  --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --bg:#111816; --surface:#18211f; --surface-2:#202b28; --ink:#e6eeeb; --ink-2:#aebcb8; --ink-3:#7d8c88;
+  --line:#2c3a37; --accent:#7fb6de; --accent-soft:#1d3444;
+  --full:#6fd1a2; --full-bg:#173a2c; --lim:#e9b760; --lim-bg:#3b2e17; --nil:#66736f; --nil-bg:#1c2523;
+  --shadow:0 1px 2px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#111816; --surface:#18211f; --surface-2:#202b28; --ink:#e6eeeb; --ink-2:#aebcb8; --ink-3:#7d8c88;
+  --line:#2c3a37; --accent:#7fb6de; --accent-soft:#1d3444;
+  --full:#6fd1a2; --full-bg:#173a2c; --lim:#e9b760; --lim-bg:#3b2e17; --nil:#66736f; --nil-bg:#1c2523;
+  --shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.5;padding-inline:16px;padding-block:0 48px}
+.wrap{max-width:1240px;margin:0 auto}
+h1,h2,h3{text-wrap:balance;margin:0}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* Header */
+header.top{padding-block:28px 20px;display:grid;gap:14px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+h1{font-size:clamp(24px,3.4vw,34px);font-weight:800;letter-spacing:-.01em;line-height:1.15}
+.lede{color:var(--ink-2);max-width:72ch;margin:0}
+.refs{display:flex;flex-wrap:wrap;gap:8px}
+.ref{font-size:12px;border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:6px 10px;color:var(--ink-2)}
+.ref b{color:var(--ink);font-weight:600}
+
+/* Nav */
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;gap:4px;padding-block:10px;border-bottom:1px solid var(--line);overflow-x:auto}
+nav.tabs a{color:var(--ink-2);text-decoration:none;font-weight:600;font-size:13px;padding:7px 12px;border-radius:6px;white-space:nowrap}
+nav.tabs a:hover{background:var(--surface-2);color:var(--ink)}
+nav.tabs a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+section{padding-block:28px 8px;scroll-margin-top:60px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:14px}
+h2{font-size:19px;font-weight:700}
+.sub{color:var(--ink-3);font-size:13px}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}
+
+/* Legend */
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--ink-2)}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+
+/* Level bars */
+.levels{display:grid;gap:0}
+.lvl{display:grid;grid-template-columns:minmax(150px,240px) 1fr 110px;gap:16px;align-items:center;padding:12px 16px;border-top:1px solid var(--line);cursor:pointer;background:none;border-left:0;border-right:0;border-bottom:0;text-align:left;color:inherit;font:inherit;width:100%}
+.lvl:first-child{border-top:0}
+.lvl:hover{background:var(--surface-2)}
+.lvl .nm{font-weight:600}
+.lvl .ds{font-size:11.5px;color:var(--ink-3);line-height:1.35}
+.bar{display:flex;height:22px;border-radius:4px;overflow:hidden;background:var(--nil-bg)}
+.bar span{display:flex;align-items:center;justify-content:center;font-size:11px;font-family:var(--mono);font-weight:500;min-width:0;overflow:hidden}
+.bar .f{background:var(--full);color:var(--surface)}
+.bar .l{background:var(--lim);color:var(--surface)}
+.bar .n{background:var(--nil-bg);color:var(--ink-3)}
+.lvl .ct{font-size:12px;color:var(--ink-2);text-align:right}
+.lvl .ct b{font-size:18px;color:var(--ink);display:block;line-height:1.1}
+
+/* Overview grid */
+.ov{display:grid;grid-template-columns:1.3fr 1fr;gap:16px}
+@media (max-width:900px){.ov{grid-template-columns:1fr}}
+.ph{padding:14px 16px 10px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:baseline}
+.ph h3{font-size:14px;font-weight:700}
+
+/* Heatmap */
+.hm-wrap{overflow-x:auto;padding:8px 12px 14px}
+table.hm{border-collapse:separate;border-spacing:3px;width:100%;font-size:12px}
+table.hm th{font-weight:600;color:var(--ink-3);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;padding:4px;text-align:center}
+table.hm th.rowh{text-align:left;text-transform:none;letter-spacing:0;font-size:12px;color:var(--ink);white-space:nowrap;cursor:pointer}
+table.hm th.rowh:hover{color:var(--accent)}
+table.hm th.rowh .rn{font-family:var(--mono);color:var(--ink-3);display:inline-block;width:34px}
+table.hm td{text-align:center;border-radius:4px;padding:6px 4px;font-family:var(--mono);font-size:11px;min-width:48px;cursor:pointer}
+
+/* Procurement */
+.proc{width:100%;border-collapse:collapse;font-size:13px}
+.proc th,.proc td{padding:9px 14px;text-align:left;border-top:1px solid var(--line)}
+.proc thead th{border-top:0;font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3);font-weight:600}
+.proc td.v{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.proc td.v.nil{color:var(--nil)}
+.callout{margin:12px 14px 14px;padding:10px 12px;background:var(--accent-soft);border-radius:6px;font-size:12.5px;color:var(--ink)}
+.callout b{font-weight:700}
+
+/* Filters */
+.filters{display:grid;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.frow{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.search{flex:1 1 260px;display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:8px;padding:0 10px;background:var(--bg)}
+.search input{border:0;background:transparent;color:var(--ink);font:inherit;padding:9px 0;width:100%;outline:none}
+.search:focus-within{border-color:var(--accent)}
+select{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+label.tg{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-2);cursor:pointer;user-select:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:inherit;font-size:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:4px 10px;cursor:pointer}
+.chip:hover{border-color:var(--accent);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.chip .n{font-family:var(--mono);opacity:.7;margin-left:4px}
+.status{font-size:12px;color:var(--ink-3)}
+button.link{font:inherit;font-size:12px;background:none;border:0;color:var(--accent);cursor:pointer;padding:0;text-decoration:underline}
+
+/* Powers grid */
+.pw{width:100%}
+.pw-head,.pw-row{display:grid;grid-template-columns:62px minmax(200px,1.5fr) repeat(5,minmax(0,1fr));gap:0}
+.pw-head{position:sticky;top:calc(env(safe-area-inset-top,0px) + 52px);z-index:3;background:var(--surface-2);border-bottom:1px solid var(--line)}
+.pw-head div{padding:9px 10px;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);font-weight:700;line-height:1.3}
+.pw-head div.lh{cursor:pointer}
+.pw-head div.lh:hover{color:var(--accent)}
+.chap{padding:10px 14px;background:var(--bg);border-bottom:1px solid var(--line);font-weight:700;font-size:13px;display:flex;gap:10px;align-items:baseline}
+.chap .rn{font-family:var(--mono);color:var(--accent);font-size:12px}
+.pw-row{border-bottom:1px solid var(--line)}
+.pw-row:hover{background:var(--surface-2)}
+.pw-row>div{padding:10px;font-size:12.5px;line-height:1.4;min-width:0}
+.pw-row .no{font-family:var(--mono);color:var(--ink-3);font-size:12px}
+.pw-row .tt{font-weight:600;color:var(--ink)}
+.pw-row .tt small{display:block;font-weight:400;color:var(--ink-3);font-size:11.5px;margin-top:2px}
+.cell{border-left:3px solid transparent}
+.cell.full{border-left-color:var(--full)}
+.cell.lim{border-left-color:var(--lim)}
+.cell.nil{border-left-color:var(--nil-bg);color:var(--nil)}
+.tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-radius:3px;padding:1px 6px;margin-bottom:3px}
+.tag.full{background:var(--full-bg);color:var(--full)}
+.tag.lim{background:var(--lim-bg);color:var(--lim)}
+.cell .tx{display:block;color:var(--ink-2)}
+.cell.lim .tx{color:var(--ink)}
+.amt{font-family:var(--mono);font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pw.focus .cell{opacity:.38}
+.pw.focus .cell.on{opacity:1;background:var(--accent-soft)}
+.pw.focus .pw-head div.on{color:var(--accent)}
+.empty{padding:40px 16px;text-align:center;color:var(--ink-3)}
+.ml{display:none}
+
+@media (max-width:820px){
+  .pw-head{display:none}
+  .pw-row{grid-template-columns:1fr;padding:12px 14px;gap:6px}
+  .pw-row>div{padding:0}
+  .pw-row .no{display:inline}
+  .pw-row .tt{margin-bottom:4px}
+  .cell{display:grid;grid-template-columns:118px 1fr;gap:8px;padding:6px 0 6px 8px!important;border-left-width:3px}
+  .ml{display:block;font-size:11px;color:var(--ink-3);font-weight:600;line-height:1.3}
+  .pw.focus .cell:not(.on){display:none}
+  .lvl{grid-template-columns:1fr;gap:8px}
+  .lvl .ct{text-align:left}
+  .lvl .ct b{display:inline;margin-right:6px}
+}
+
+/* Conditions */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:900px){.cols{grid-template-columns:1fr}}
+ol.cond{margin:0;padding:6px 16px 14px 0;list-style:none;counter-reset:c}
+ol.cond li{display:grid;grid-template-columns:44px 1fr;gap:6px;padding:9px 0;border-top:1px solid var(--line);font-size:13px;color:var(--ink-2)}
+ol.cond li:first-child{border-top:0}
+ol.cond li .rn{font-family:var(--mono);color:var(--accent);text-align:right;padding-right:4px;font-size:12px;padding-top:1px}
+ol.cond li b{color:var(--ink);font-weight:600}
+.docs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){.docs{grid-template-columns:1fr}}
+.doc{padding:16px;display:grid;gap:8px;align-content:start}
+.doc .k{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.doc h3{font-size:15px;font-weight:700}
+.doc dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:12.5px}
+.doc dt{color:var(--ink-3)}
+.doc dd{margin:0;color:var(--ink)}
+.doc p{margin:0;font-size:12.5px;color:var(--ink-2)}
+footer{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-3);max-width:90ch}
+@media (prefers-reduced-motion:no-preference){.bar span{transition:flex-basis .4s ease}}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Geological Survey of India · CHQ Budget &amp; Finance · DFPR 2024, Rule 12(2) &amp; 12(3)</div>
+  <h1>Who can sanction what: GSI financial powers, 2026</h1>
+  <p class="lede">The Ministry of Mines delegated powers to the Director General (Annexure-I, 30.06.2026) and approved their re-delegation to four lower levels (Annexure-II, 22.09.2026). This dashboard puts all five levels side by side for every item.</p>
+  <div class="refs">
+    <span class="ref"><b>No. 51</b>/GSI/CHQ/Budget &amp; Finance/DFPR/2026-27 · 23.09.2026</span>
+    <span class="ref"><b>F.No. 11/08/2026-Mines-I</b> · 30.06.2026 &amp; 22.09.2026</span>
+    <span class="ref">Supersedes MoM Order <b>18/1/2016-M.II</b> of 22.11.2016</span>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <a href="#overview">Overview</a>
+  <a href="#powers">Powers by item</a>
+  <a href="#conditions">Conditions</a>
+  <a href="#documents">Documents</a>
+</nav>
+
+<section id="overview">
+  <div class="sec-head">
+    <h2>How much each level can sanction</h2>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--full)"></i>Full power</span>
+      <span><i class="sw" style="background:var(--lim)"></i>Capped amount</span>
+      <span><i class="sw" style="background:var(--nil-bg);border:1px solid var(--line)"></i>Nil</span>
+    </div>
+  </div>
+  <div class="panel levels" id="levels"></div>
+  <p class="sub" style="margin-top:8px">Counts are across <span id="nItems" class="mono"></span> powers (sub-items counted separately). Select a level to jump to its column.</p>
+
+  <div class="ov" style="margin-top:18px">
+    <div class="panel">
+      <div class="ph"><h3>Coverage by chapter</h3><span class="sub">Items where the level has any power / items in chapter</span></div>
+      <div class="hm-wrap"><table class="hm" id="heat"></table></div>
+    </div>
+    <div class="panel">
+      <div class="ph"><h3>Procurement ceilings (Chapter I, Item 1)</h3><span class="sub">Per case</span></div>
+      <div style="overflow-x:auto">
+      <table class="proc">
+        <thead><tr><th>Mode</th><th>DG</th><th>HoDs</th><th>DDG State Units etc.</th></tr></thead>
+        <tbody>
+          <tr><td>Open / limited tender</td><td class="v">₹100 cr</td><td class="v">₹10 cr</td><td class="v">₹1 cr</td></tr>
+          <tr><td>Open / limited tender (IT)</td><td class="v">₹100 cr</td><td class="v">₹1 cr</td><td class="v">₹25 lakh</td></tr>
+          <tr><td>Negotiation / single / proprietary</td><td class="v">₹25 cr</td><td class="v">₹1 cr</td><td class="v">₹50 lakh</td></tr>
+          <tr><td>Single source selection (AMC, lab outsourcing, Govt consultants)</td><td class="v">₹5 cr</td><td class="v nil">Nil</td><td class="v nil">Nil</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="callout"><b>Report to Ministry of Mines</b> any procurement above <span class="amt">₹20 cr</span> (open/limited tender) or above <span class="amt">₹5 cr</span> (negotiated, single tender, proprietary), or when an open/limited tender ends in single-source selection. Lower levels report procurements beyond their delegation to the DG for compilation at CHQ.</div>
+      <p class="sub" style="padding:0 14px 14px;margin:0">Chemistry/Geophysics/Engineering in-charges and HOOs have no Item 1 procurement power. “Full power” elsewhere is still capped by each authority's Item 1 limits (Condition II).</p>
+    </div>
+  </div>
+</section>
+
+<section id="powers">
+  <div class="sec-head">
+    <h2>Powers by item</h2>
+    <span class="sub">Annexure-II, all five levels</span>
+  </div>
+  <div class="panel">
+    <div class="filters">
+      <div class="frow">
+        <label class="search" for="q"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="color:var(--ink-3)"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search items or amounts: vehicle, hutment, POL, 50,000…" autocomplete="off"></label>
+        <select id="lvlSel" aria-label="Focus on a level">
+          <option value="">Focus: all levels</option>
+        </select>
+        <label class="tg" for="hideNil"><input type="checkbox" id="hideNil"> Only items the focused level can sanction</label>
+      </div>
+      <div class="chips" id="chips"></div>
+      <div class="frow"><span class="status" id="status"></span><button class="link" id="reset" type="button">Clear filters</button></div>
+    </div>
+    <div class="pw" id="pw"></div>
+  </div>
+  <p class="sub" style="margin-top:8px">Most “Full power” entries are also subject to guidelines of the Nodal Ministry / MoF, GFR 2017 and DFPR 2024 as amended. Amounts are summarised from the order; check the signed text before sanctioning.</p>
+</section>
+
+<section id="conditions">
+  <div class="sec-head"><h2>Conditions attached to the delegation</h2></div>
+  <div class="cols">
+    <div class="panel">
+      <div class="ph"><h3>Annexure-II · re-delegation within GSI</h3><span class="sub">9 conditions</span></div>
+      <ol class="cond" id="condII"></ol>
+    </div>
+    <div class="panel">
+      <div class="ph"><h3>Annexure-I · Ministry to DG</h3><span class="sub">11 conditions</span></div>
+      <ol class="cond" id="condI"></ol>
+    </div>
+  </div>
+</section>
+
+<section id="documents">
+  <div class="sec-head"><h2>The three documents</h2></div>
+  <div class="docs">
+    <div class="panel doc">
+      <span class="k">Covering letter</span>
+      <h3>GSI CHQ conveys revised powers</h3>
+      <dl><dt>No.</dt><dd>51/GSI/CHQ/Budget &amp; Finance/DFPR/2026-27</dd><dt>Date</dt><dd class="mono">23.09.2026</dd><dt>Signed</dt><dd>Dr. Joydeep Guha, ADG (Finance)</dd><dt>To</dt><dd>ADGs &amp; HoDs of all Regions, DDGs &amp; HoDs of CHQ, M&amp;CSD, RSAS, DGCO, TI and all State Units</dd></dl>
+      <p>Powers are to be exercised strictly within the Ministry's terms and conditions. DDG (IT) is asked to upload the orders on the GSI portal.</p>
+    </div>
+    <div class="panel doc">
+      <span class="k">Annexure-I · Rule 12(2)</span>
+      <h3>Ministry of Mines → Director General</h3>
+      <dl><dt>F.No.</dt><dd>11/8/2026-Mines I</dd><dt>Date</dt><dd class="mono">30.06.2026</dd><dt>Signed</dt><dd>Yogendra Singh Bhamboo, Director (Technical)</dd><dt>Concurrence</dt><dd>JS&amp;FA (Mines), Note #49, 23.06.2026</dd></dl>
+      <p>16 chapters of powers to the DG, in supersession of all earlier Ministry orders. Responds to GSI letter 0097 of 23.03.2026.</p>
+    </div>
+    <div class="panel doc">
+      <span class="k">Annexure-II · Rule 12(3)</span>
+      <h3>DG → lower levels in GSI</h3>
+      <dl><dt>F.No.</dt><dd>11/08/2026-Mines-I</dd><dt>Date</dt><dd class="mono">22.09.2026</dd><dt>Signed</dt><dd>Yogendra Singh Bhamboo, Director (Technical)</dd><dt>Concurrence</dt><dd>JS&amp;FA (Mines), Note #115</dd></dl>
+      <p>Item-wise powers for HoDs, DDGs/Directors of State Units and operational units, Chemistry/Geophysics/Engineering in-charges, and HOOs. Replaces Order 18/1/2016-M.II of 22.11.2016.</p>
+    </div>
+  </div>
+  <footer>Built from Approved_DFPR_of_GSI-2026 (34 pages). Level names are shortened in the table; hover a column header or see the Overview for the full description of each level.</footer>
+</section>
+</div>
+
+<script>
+const L=[
+ {k:'DG',s:'DG, GSI',d:'Director General, GSI'},
+ {k:'HoD',s:'HoDs',d:'All HoDs of Regions, incl. HoD of CHQ, RSAS & M&CSD'},
+ {k:'DDG',s:'DDG / Dir. I/C units',d:'DDGs / Directors I/C of State Units, DGCO, Head of TI, Operations, DDG (OPEC & OPWC)'},
+ {k:'Spec',s:'Chem · Geophys · Engg',d:'DDG/Director I/C Chemistry & Geophysics; CE/SE I/C Engineering'},
+ {k:'HOO',s:'HOOs & FSP I/C',d:'HOOs of Regions/State Units, CHQ, RSAS, M&CSD, TI, DGCO; Director/SG I/C Field Program'}
+];
+const CH={I:'Procurement',II:'Land & Building',III:'Civil Works',IV:'Repair & Maintenance',V:'Hiring of Services, Equipment & Transport',VI:'Transportation, Material',VII:'Insurance, Rates & Taxes',VIII:'Communication Facilities',IX:'Office Contingencies',X:'Exhibition & Seminar',XI:'Printing & Binding',XII:'Contingent & Departmental Advances',XIII:'Unserviceable Stores, Machinery, Equipment',XIV:'Miscellaneous',XV:'Welfare & Grant-in-Aid',XVI:'Administration & Legal Affairs'};
+const N='Nil';
+const D=[
+['I','1(a)','Procurement: open or limited tender',['Up to ₹100 crore per case','Up to ₹10 crore per case (non-IT); up to ₹1 crore for IT goods/services','Up to ₹1 crore per case (non-IT); up to ₹25 lakh for IT goods/services',N,N]],
+['I','1(b)','Procurement: negotiation, single tender or proprietary contracts',['Up to ₹25 crore per case','Up to ₹1 crore per case (except IT)','Up to ₹50 lakh per case (except IT)',N,N]],
+['I','1(c)(i)','Single source: AMC / CAMC / spares / software upgrade with PAC',['Up to ₹5 crore per case',N,N,N,N]],
+['I','1(c)(ii)','Single source: outsourcing lab analysis to MoM-approved agencies',['Up to ₹5 crore per case',N,N,N,N]],
+['I','1(c)(iii)','Single source: Govt agencies as consultants for specialised work',['Up to ₹5 crore per case',N,N,N,N]],
+['I','1(d)','Engaging retired Govt employees as individual consultants',['Full power, per MoM / Nodal Ministry guidelines',N,N,N,N]],
+['I','2','Purchase of replacement vehicles incl. cars',['Full power for replacing end-of-life field vehicles; new vehicles need Ministry sanction after MoF approval',N,N,N,N]],
+['I','3','Purchase & repair of (a) stores, instruments, equipment (b) furniture & fixtures',['Full power','Full power','Full power','(a) ₹50,000 per case, max ₹3 lakh/yr; (b) ₹50,000/yr','HOO only: (a) ₹10,000 per case, max ₹1 lakh/yr; (b) ₹15,000/yr']],
+['I','4','Purchase of publications & journals (official, SOI maps / NRSA data, online subscriptions)',['Full power','Full power','Full power','(a) ₹10,000/yr; (b) ₹3,000/yr; (c) Nil','(a) ₹10,000/yr; (b) ₹3,000/yr; (c) Nil']],
+['I','5','Medicines for office/field work and high-altitude expeditions (>2500 m)',['Full power','₹15,000/yr per individual','₹10,000/yr per individual','₹5,000/yr per individual','₹5,000/yr per individual']],
+['I','6','Uniforms, badges, clothing and washing allowance',['Full power','Full power','Full power',N,N]],
+['I','7','POL for vehicles, drilling rigs, generators',['Full power','Full power','Full power','₹50,000 per case, annual limit ₹2.5 lakh','₹50,000 per case, annual limit ₹2.5 lakh']],
+['II','1','Compensation for temporary land used in field operations',['Full power','Full power','Full power',N,N]],
+['II','2','Hiring land for field operations (camping, drilling)',['Full power','₹3 lakh/yr per case, with local revenue authority','₹50,000/yr per case, with local revenue authority',N,N]],
+['II','3','Construction of semi-permanent hutments (drilling / exploration / camp)',['₹1 crore','₹50 lakh','₹25 lakh',N,N]],
+['II','4','Construction of temporary hutments in field',['₹1 crore','₹25 lakh','₹10 lakh',N,N]],
+['II','5','Rent for field accommodation (camping / fieldwork)',['₹40,000/month per field party','₹25,000/month per field party','₹15,000/month per field party',N,N]],
+['II','6','Permanent acquisition of land',['Full power, with local revenue authority & CPWD','Full power for field-operation land only, with revenue authority & CPWD','Full power for field-operation land only, with revenue authority & CPWD',N,N]],
+['II','7','Rent-hiring of ordinary office accommodation',['Full power, with CPWD (or State revenue authority)','Full power, with CPWD (or State revenue authority)',N,N,N]],
+['III','1','Repair & maintenance of Government buildings',['Full power','Full power','₹5 lakh per case',N,N]],
+['III','2','Repairs & alteration to hired / requisitioned buildings',['₹25 lakh/yr','₹10 lakh/yr','₹5 lakh/yr',N,N]],
+['IV','1','Repairs & removal of machinery & instruments (non-capital)',['Full power','Full power','₹25,000 at a time, max ₹1 lakh/yr','₹25,000 per machine/instrument, annual ceiling ₹1 lakh','₹25,000 per machine/instrument, annual ceiling ₹1 lakh']],
+['IV','2','Maintenance & repairs of departmental vehicles',['Full power','Full power','₹1 lakh/yr per vehicle','CE/SE I/C only: ₹25,000/yr per light vehicle, ₹40,000/yr per heavy vehicle',N]],
+['V','1','Conveyance hire',['Full power','Full power','Full power',N,N]],
+['V','2','Hiring office furniture, fans, coolers, ACs, heaters, water purifiers',['Full power','Full power','₹5 lakh/yr',N,'₹10,000/yr']],
+['V','3','Hiring vehicles, jeeps, trucks, buses, tractors for field & office',['Full power','Full power','₹50 lakh/yr','CE/SE I/C only: ₹1.5 lakh per drilling-camp shift/closure, annual ceiling ₹10 lakh','FSP in-charge: ₹10,000 per FSP for camp shifting/closing']],
+['V','4','Chartering vessels, boats, aircraft, helicopters, warehouses',['Up to ₹50 lakh per case','Up to ₹20 lakh per case',N,N,N]],
+['V','5','Analyses / beneficiation of samples by outside agencies',['Full power','Full power (within India only)','Full power within India, for DDGs of State Units & Operational Units',N,N]],
+['V','6','Approved technical collaboration with other scientific bodies',['Within India: full power; foreign firms/Govts: ₹2 crore',N,N,N,N]],
+['V','7','Course fees for training GSI staff at recognised Indian institutes',['Full power, incl. drawing as advance','Full power, incl. drawing as advance',N,N,N]],
+['V','8','Quarterly imprest to SCI or other vessel operator',['As per agreement with SCI / operating agency','As per agreement with SCI / operating agency',N,N,N]],
+['V','9','Hiring manpower: housekeeping, security, contingent service',['Full power','Housekeeping ₹4 crore/yr; security ₹4 crore/yr; contingent ₹1 crore/yr','Housekeeping ₹15 lakh/yr; security ₹15 lakh/yr; contingent ₹3 lakh/yr',N,N]],
+['V','10','Hiring manpower for Field Season Programme',['Full power','Full power','₹2 lakh per FSP (State Unit / Operations DDGs only)',N,N]],
+['VI','1','Freight charges; demurrage & wharfage',['Full power','Full power','Full power',N,N]],
+['VII','1','Municipal rates & taxes incl. arrears',['Full power','Full power','Full power',N,'₹10 lakh/yr']],
+['VII','2','Vehicle registration, road tax, fitness/pollution tests, tolls, number plates',['Full power','Full power','Full power','CE/SE I/C only: ₹25,000 per case, annual ceiling ₹1 lakh',N]],
+['VIII','1','Postal, courier & money transfer charges',['Full power','Full power','Full power','₹25,000 per case, max ₹1 lakh/yr','HOO: ₹25,000 per case, max ₹1 lakh/yr; FSP in-charge: ₹25,000 per case for sending samples']],
+['VIII','2','Telephone charges',['Full power','Full power','Full power',N,'Full power for HOO only, where administratively approved']],
+['VIII','3','Installation of residential telephone',['Full power','Full power','Full power',N,N]],
+['IX','1','Gas, water, electricity & solar energy charges',['Full power','Full power','Full power',N,'HOO only: ₹25 lakh/yr']],
+['IX','2','Workers / labourers for cleanliness, beautification, horticulture',['Full power','Full power','₹10 lakh',N,N]],
+['IX','3','Misc. day-to-day expenses for FSP and office administration',['Full power','₹50,000 per case, annual ceiling ₹10 lakh','₹25,000 per case, annual ceiling ₹5 lakh','₹25,000 per case, annual ceiling ₹2.5 lakh','FSP in-charge: ₹25,000/yr per FSP']],
+['IX','4','Honorarium to Govt servant for special-merit intermittent work',['Full power','Up to ₹2,500','Up to ₹2,500',N,N]],
+['IX','5','Honorarium / fees for guest faculty & external experts',['Full power','Full power',N,N,N]],
+['IX','6','Honorarium to Inquiry Officer / Presenting Officer',['Full power','Full power',N,N,N]],
+['IX','7','Professional fees to external experts (report / SOP / FSP reviews, committees)',['Full power','₹10,000 per case (eminent persons); ₹7,500 (others)','TI Head: ₹10,000 (eminent) / ₹7,500 (others); State Unit Head: ₹7,500 per case',N,N]],
+['IX','8','Cartography & map printing by outside agencies',['Full power','₹1 lakh','₹50,000',N,N]],
+['IX','9','Lunch / dinner for foreign Govts & international bodies',['Full power','Full power','Full power',N,N]],
+['IX','10','Lunch / dinner for Indian scientists & delegates',['Full power','Full power','Full power',N,N]],
+['X','1','Expenditure for participating in exhibitions, seminars, conferences',['Full power','Full power',N,N,N]],
+['X','2','Expenditure on exhibitions, seminars, events organised by GSI',['Full power','Full power','₹1 lakh per event',N,N]],
+['X','3','Participation fee for events by other bodies within India',['Full power','Full power',N,N,N]],
+['X','4','Registration fee for seminars, conferences, workshops',['₹50,000 per participant (domestic); full power if approved by Administrative Ministry','₹20,000 per participant (domestic); full power if approved by Administrative Ministry','₹10,000 per participant (domestic)',N,N]],
+['X','5','Advertisement & publicity',['Full power','Full power',N,N,N]],
+['XI','1','Printing & binding through / with approval of Directorate of Printing',['Full power','Full power','Full power',N,N]],
+['XI','2','Designing, printing & binding of reports, journals, books, maps',['Full power','₹10 lakh/yr (max ₹25,000 per FSP report); ₹5 lakh/yr for non-FSP work','₹5 lakh/yr (max ₹20,000 per FSP report); ₹50,000/yr for non-FSP work',N,N]],
+['XI','3','Binding of library books / journals',['Full power','₹2 lakh/yr','₹50,000/yr (State Units & TI)',N,N]],
+['XI','4','Lamination work',['Full power','₹10,000/yr recurring; ₹50,000/yr non-recurring','₹5,000/yr recurring; ₹20,000/yr non-recurring',N,N]],
+['XI','5','Digitisation of scientific, administrative, financial, legal records',['Full power','₹50 lakh/yr',N,N,N]],
+['XII','1','Advance for repairs of semi-permanent structures & temporary hutments',['₹1 lakh per case','₹50,000 per case','₹25,000 per case',N,N]],
+['XII','2','Advance for fuel & lubricants',['₹1.5 lakh at a time','₹1 lakh at a time','₹50,000 at a time',N,N]],
+['XII','3','Contingent advance for transit expenses of vehicles sent by road',['₹2.5 lakh per case','₹1 lakh per case','₹75,000 per case','CE/SE I/C only: ₹50,000 per case',N]],
+['XII','4','Advance for repairs of machinery / equipment in the field',['₹1 lakh per case','₹50,000 per case','₹40,000 per case (State Units & CE)',N,N]],
+['XII','5','Advance for vehicle road tax, registration, fitness, pollution fees',['Full power','Full power','Full power',N,N]],
+['XII','6','Advance for journal subscriptions & Article Publication Charges',['Full power','Full power','Full power, except Article Publication Charges',N,N]],
+['XII','7','Advance for supply of goods & services',['Full power, subject to GFR 2017','Full power, subject to GFR 2017',N,N,N]],
+['XII','8','Advance for exhibitions / seminars / events (hosted or attended)',['₹10 lakh per case','₹5 lakh per case','₹1 lakh per case',N,N]],
+['XII','9','Grant-in-aid to other scientific bodies (drawable as advance)',['₹50,000 per case, max ₹5 lakh/yr',N,N,N,N]],
+['XII','10','Expenditure & advance for expeditions above 2500 m',['₹25 lakh per case','₹15 lakh per case',N,N,N]],
+['XII','11','Opening letter of credit with public sector banks',['Full power','Full power','Up to the unit\'s purchase power for the item',N,N]],
+['XII','12','Advance for building hutments in the field',['₹1 lakh','₹1 lakh','₹75,000',N,N]],
+['XII','13','Advance on abstract contingent bill for goods on delivery incl. gas',['Full power','Full power','₹1 lakh','₹25,000',N]],
+['XII','14','Advance for TA of non-official committee / commission members',['Full power','Full power','₹10 lakh/yr (Training Institute only)',N,N]],
+['XII','15','Sanction / enhancement of permanent advance or imprest',['Full power, subject to GFR 2017','Full power, subject to GFR 2017','Full power, subject to GFR 2017',N,N]],
+['XII','16','Advance to PSUs / statutory bodies for collaboration & services',['Full power; needs contract, payment linked to progress',N,N,N,N]],
+['XII','17(i)','Rolling Contingent Advance (RCA) for FSP implementation',['₹5 lakh per FSP','₹3 lakh per FSP','₹2 lakh per FSP',N,N]],
+['XII','17(ii)','RCA / ACA for Training Institute activities',['₹10 lakh per case','₹5 lakh per case','₹2.5 lakh per case (TI only)',N,N]],
+['XII','17(iii)','RCA for laboratories & other approved programmes',['₹3 lakh per case','₹2 lakh per case','₹50,000 per case','₹50,000 per case',N]],
+['XII','18','Non-Rolling Contingent Advance for vehicle hire & POL (lab & field)',['₹2.5 lakh per case','₹2 lakh per case','₹1 lakh per case',N,N]],
+['XII','19','Abstract Contingent Advance for special activities (sports, cultural meets, MPs\' committee meetings)',['₹20 lakh per case','₹10 lakh per case',N,N,N]],
+['XIII','1','Condemnation of motor vehicles & disposal sanction',['Full power, subject to DFPR 2024',N,N,N,N]],
+['XIII','2','Write-off of irrecoverable losses of stores / public money',['Theft, fraud or negligence: ₹5 lakh per case; other cases: ₹10 lakh per case',N,N,N,N]],
+['XIII','3','Write-off of revenue loss or irrecoverable loans & advances',['₹5 lakh per case',N,N,N,N]],
+['XIII','4','Disposal of field-camp hutments to other departments',['Full power','Full power',N,N,N]],
+['XIII','5','Declaring stores unserviceable / surplus / obsolete and disposal',['Up to the purchase power for the item (except motor vehicles)','Up to the purchase power for the item (except motor vehicles)','Up to the purchase power for the item (except motor vehicles)',N,N]],
+['XIV','1','Beneficiation tests by NML / outside agencies within approved programme',['Full power','Full power',N,N,N]],
+['XIV','2','Adding names to free distribution list of publications',['Full power (priced & unpriced)','Full power for unpriced publications only',N,N,N]],
+['XIV','3','Compensation under Employees\' Compensation Act, 1923',['Full power','Full power',N,N,N]],
+['XIV','4','Compensation for crop damage during field operations',['Full power, with local revenue authority','Full power, with local revenue authority',N,N,N]],
+['XIV','5','Bank commission on drafts from PSBs other than UCO Bank',['Full power','Full power','As per actual commission charged',N,N]],
+['XIV','6','NABL accreditation & audit charges for laboratories',['Full power','Full power','₹1 lakh (State Units)',N,N]],
+['XIV','7','Upkeep & development of Geo-Heritage sites & museums',['Full power','₹10 lakh per site per year',N,N,N]],
+['XV','1','Recreational facilities for field camps',['₹50,000/yr per camp','₹30,000/yr per camp','₹10,000/yr per camp','₹5,000/yr per camp','₹5,000/yr per camp']],
+['XV','2','All-India GSI sports & cultural competitions incl. TA/DA',['Sports ₹50 lakh + cultural ₹25 lakh, overall ceiling ₹75 lakh',N,N,N,N]],
+['XVI','1','Fees to barristers, advocates, pleaders, arbitrators, umpires',['Full power','Full power','Full power (DGCO in-charge)',N,N]],
+['XVI','2(a)','Lawsuits & prosecution cases',['Full financial power per GFR, DFPR & Ministry of Law; power to initiate a suit: Nil',N,N,N,N]],
+['XVI','2(b)','Arbitration cases',['Full financial power per GFR, DFPR & Ministry of Law; power to refer to arbitration: Nil',N,N,N,N]],
+['XVI','3','Payments in discharge of court decrees / orders',['Full power',N,N,N,N]],
+['XVI','4','Independent consultation on vigilance matters',['Full power',N,N,N,N]],
+['XVI','5','Twin Otter aircraft VT-HAU / Heliborne system charges',['Full power','Full power',N,N,N]],
+['XVI','6(a)','Statutory duties & taxes (Income Tax, GST, TDS, Customs)',['Full power','Full power','Full power',N,N]],
+['XVI','6(b)','CA / CS / tax consultant fees for statutory compliance',['Full power','₹10 lakh/yr','₹1 lakh/yr',N,N]],
+['XVI','7','Rewards, awards & prizes',['₹5 lakh per case, annual ceiling ₹25 lakh','₹50,000 per case, annual ceiling ₹5 lakh',N,N,N]]
+];
+const type=s=>s===N?'nil':(/^(Full|As per)/.test(s)?'full':'lim');
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt=s=>esc(s).replace(/₹[\d,.]+(?:\s?(?:crore|lakh))?/g,m=>`<span class="amt">${m}</span>`);
+const chapters=Object.keys(CH);
+
+// Level bars
+const stats=L.map((_,i)=>{const c={full:0,lim:0,nil:0};D.forEach(r=>c[type(r[3][i])]++);return c});
+document.getElementById('nItems').textContent=D.length;
+document.getElementById('levels').innerHTML=L.map((l,i)=>{const c=stats[i],t=D.length,any=c.full+c.lim;
+ const seg=(k,cls)=>c[k]?`<span class="${cls}" style="flex-basis:${c[k]/t*100}%" title="${c[k]}">${c[k]/t>.06?c[k]:''}</span>`:'';
+ return `<button class="lvl" type="button" data-l="${i}"><div><div class="nm">${esc(l.s)}</div><div class="ds">${esc(l.d)}</div></div><div class="bar">${seg('full','f')}${seg('lim','l')}${seg('nil','n')}</div><div class="ct"><b class="mono">${any}</b>powers of ${t}</div></button>`}).join('');
+document.querySelectorAll('.lvl').forEach(b=>b.onclick=()=>{state.lvl=b.dataset.l;lvlSel.value=b.dataset.l;render();document.getElementById('powers').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});
+
+// Heatmap
+const heat=document.getElementById('heat');
+let h='<thead><tr><th></th>'+L.map(l=>`<th title="${esc(l.d)}">${esc(l.k)}</th>`).join('')+'</tr></thead><tbody>';
+chapters.forEach(ch=>{const rows=D.filter(r=>r[0]===ch);
+ h+=`<tr><th class="rowh" data-ch="${ch}"><span class="rn">${ch}</span>${esc(CH[ch])}</th>`+L.map((_,i)=>{const f=rows.filter(r=>type(r[3][i])==='full').length,lm=rows.filter(r=>type(r[3][i])==='lim').length,a=f+lm,p=a/rows.length;
+  const bg=a===0?'var(--nil-bg)':`color-mix(in srgb, ${f>=lm?'var(--full)':'var(--lim)'} ${Math.round(18+p*72)}%, var(--surface))`;
+  const fg=a===0?'var(--nil)':(p>.5?'var(--surface)':'var(--ink)');
+  return `<td data-ch="${ch}" data-l="${i}" style="background:${bg};color:${fg}" title="${esc(L[i].s)} · ${esc(CH[ch])}: ${f} full, ${lm} capped, ${rows.length-a} nil">${a}/${rows.length}</td>`}).join('')+'</tr>'});
+heat.innerHTML=h+'</tbody>';
+heat.addEventListener('click',e=>{const t=e.target.closest('[data-ch]');if(!t)return;state.ch=new Set([t.dataset.ch]);if(t.dataset.l!==undefined){state.lvl=t.dataset.l;lvlSel.value=t.dataset.l}render();document.getElementById('powers').scrollIntoView()});
+
+// Filters
+const state={q:'',ch:new Set(),lvl:'',hideNil:false};
+const lvlSel=document.getElementById('lvlSel');
+L.forEach((l,i)=>lvlSel.insertAdjacentHTML('beforeend',`<option value="${i}">Focus: ${esc(l.s)}</option>`));
+const chips=document.getElementById('chips');
+chips.innerHTML=chapters.map(ch=>`<button class="chip" type="button" data-ch="${ch}" aria-pressed="false">${ch} · ${esc(CH[ch])}<span class="n">${D.filter(r=>r[0]===ch).length}</span></button>`).join('');
+chips.onclick=e=>{const b=e.target.closest('.chip');if(!b)return;const c=b.dataset.ch;state.ch.has(c)?state.ch.delete(c):state.ch.add(c);render()};
+document.getElementById('q').oninput=e=>{state.q=e.target.value.trim().toLowerCase();render()};
+lvlSel.onchange=e=>{state.lvl=e.target.value;render()};
+document.getElementById('hideNil').onchange=e=>{state.hideNil=e.target.checked;render()};
+document.getElementById('reset').onclick=()=>{state.q='';state.ch.clear();state.lvl='';state.hideNil=false;document.getElementById('q').value='';lvlSel.value='';document.getElementById('hideNil').checked=false;render()};
+
+const pw=document.getElementById('pw');
+function render(){
+ chips.querySelectorAll('.chip').forEach(b=>b.setAttribute('aria-pressed',state.ch.has(b.dataset.ch)));
+ const li=state.lvl===''?-1:+state.lvl;
+ const rows=D.filter(r=>{
+  if(state.ch.size&&!state.ch.has(r[0]))return false;
+  if(state.hideNil&&li>=0&&type(r[3][li])==='nil')return false;
+  if(state.q){const hay=(r[0]+' '+CH[r[0]]+' '+r[1]+' '+r[2]+' '+r[3].join(' ')).toLowerCase();if(!state.q.split(/\s+/).every(w=>hay.includes(w)))return false}
+  return true});
+ pw.classList.toggle('focus',li>=0);
+ let out='<div class="pw-head"><div>Item</div><div>Nature of power</div>'+L.map((l,i)=>`<div class="lh${i===li?' on':''}" data-l="${i}" title="${esc(l.d)}">${esc(l.s)}</div>`).join('')+'</div>';
+ let cur='';
+ rows.forEach(r=>{
+  if(r[0]!==cur){cur=r[0];out+=`<div class="chap"><span class="rn">Ch. ${cur}</span>${esc(CH[cur])}</div>`}
+  out+=`<div class="pw-row"><div class="no">${esc(r[1])}</div><div class="tt">${esc(r[2])}</div>`+r[3].map((v,i)=>{const t=type(v);
+   const body=t==='nil'?'<span class="tx">Nil</span>':t==='full'?`<span class="tag full">${v.startsWith('As per')?'Per agreement':'Full'}</span><span class="tx">${fmt(v.replace(/^Full power[,;.]?\s*/,'').replace(/^Full financial power\s*/,'Financial: '))}</span>`:`<span class="tag lim">Capped</span><span class="tx">${fmt(v)}</span>`;
+   return `<div class="cell ${t}${i===li?' on':''}"><span class="ml">${esc(L[i].s)}</span><div>${body}</div></div>`}).join('')+'</div>'});
+ if(!rows.length)out+='<div class="empty">No items match. Try a different word or clear the filters.</div>';
+ pw.innerHTML=out;
+ pw.querySelectorAll('.lh').forEach(h=>h.onclick=()=>{state.lvl=state.lvl===h.dataset.l?'':h.dataset.l;lvlSel.value=state.lvl;render()});
+ const parts=[];if(state.ch.size)parts.push([...state.ch].map(c=>'Ch. '+c).join(', '));if(li>=0)parts.push('focus: '+L[li].s);if(state.q)parts.push(`“${state.q}”`);
+ document.getElementById('status').textContent=`Showing ${rows.length} of ${D.length} items`+(parts.length?' · '+parts.join(' · '):'');
+ document.getElementById('reset').hidden=!parts.length&&!state.hideNil;
+}
+render();
+
+// Conditions
+const cII=[
+ ['I','Powers are exercised under GFR, Ministry of Finance orders and the <b>restrictions and scales</b> of the Nodal Ministry.'],
+ ['II','<b>“Full power” is capped</b> by the authority\'s own Chapter I, Item 1 procurement limits unless an item says otherwise.'],
+ ['III','Procurement for every item follows <b>Chapter I, Item 1</b> unless the item defines its own power.'],
+ ['IV','DG\'s powers are exercised with <b>concurrence of ADG/DDG (Finance)</b>, with administrative and financial checks in place.'],
+ ['V','Spending depends on <b>funds available</b>; sectional heads track annual limits.'],
+ ['VI','Regions, Missions, RSAS, M&amp;CSD etc. <b>report to DG</b> any procurement beyond their delegation, for compilation at CHQ and onward to the Ministry.'],
+ ['VII','Ensure <b>maximum bidder participation</b> so tenders do not end as single tenders.'],
+ ['VIII','Subject to DFPR 2024, GFR 2017, the procurement manuals, <b>CVC</b> and DoE / MoF guidelines.'],
+ ['IX','The DG can <b>withdraw</b> the delegation at any time without giving reasons.']];
+const cI=[
+ ['I','Powers follow GFR, MoF orders and Nodal Ministry restrictions and scales.'],
+ ['II','“Full power” is capped by Chapter I, Item 1 limits unless specified.'],
+ ['III','Procurement follows Chapter I, Item 1 unless an item defines its own power.'],
+ ['IV','DG exercises powers with <b>ADG/DDG (Finance) concurrence</b>.'],
+ ['V','Subject to funds; sectional heads track annual limits.'],
+ ['VI','<b>Report to MoM</b> procurement above <span class="amt">₹20 crore</span> (open/limited tender) or above <span class="amt">₹5 crore</span> (negotiated/single/proprietary), or when a tender ends in single-source selection.'],
+ ['VII','Maximise bidder participation to avoid single tenders.'],
+ ['VIII','Send a <b>quarterly write-off statement</b> to the Integrated Finance Division with reasons, nature of loss and remedial steps.'],
+ ['IX','Subject to DFPR 2024, GFR 2017, procurement manuals, CVC and DoE guidelines.'],
+ ['X','Powers not delegated go to the <b>Ministry of Mines / Nodal Ministry</b> in good time.'],
+ ['XI','The Ministry can withdraw the delegation at any time without giving reasons.']];
+const li=a=>a.map(([n,t])=>`<li><span class="rn">${n}</span><span>${t}</span></li>`).join('');
+document.getElementById('condII').innerHTML=li(cII);
+document.getElementById('condI').innerHTML=li(cI);
+</script>
+
+</body></html>
